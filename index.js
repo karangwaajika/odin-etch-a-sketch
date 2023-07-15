@@ -1,5 +1,5 @@
 const container = document.querySelector('#container');
-
+const userInput = document.querySelector('button.userInput');
 
 for(let i=1; i<= 256; i++){
     const content = document.createElement('div');
@@ -7,3 +7,8 @@ for(let i=1; i<= 256; i++){
     content.classList.add(`grid-${i}`);
     container.appendChild(content)
 }
+
+userInput.addEventListener('click', () => {
+    let gridSize = +prompt("Enter Grid Size");
+    alert(gridSize*2);
+})
