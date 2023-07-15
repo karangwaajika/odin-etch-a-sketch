@@ -19,7 +19,16 @@ userInput.addEventListener('click', () => {
 
         oldDiv.forEach((div)=>{
             div.remove()
-        })  
+        })
+        for(let i=1; i<= gridSize*gridSize; i++){
+            let newGridSize = (400/gridSize);
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('grid');
+            newDiv.classList.add(`grid-${i}`);
+            newDiv.setAttribute('style', `height: ${newGridSize}px;width: ${newGridSize}px;`)
+            container.appendChild(newDiv)
+        }
+        
     }
     
 })
